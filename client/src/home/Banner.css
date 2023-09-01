@@ -1,0 +1,11 @@
+.banner-wrapper {
+    background-color: rgb(151, 242, 194);
+    height: 50px;
+    align-items: center;
+    border: 0.5px solid rgba(108, 102, 102, 0.366);
+    text-align: center;
+}
+
+.banner-wrapper > h1 {
+    display: inline;
+}

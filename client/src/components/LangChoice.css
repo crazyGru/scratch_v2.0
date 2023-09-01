@@ -1,0 +1,8 @@
+.langchoice-wrapper {
+    height: 3.5vh;
+}
+
+.langchoice-wrapper > select {
+    height: 100%;
+    width: 100px;
+}

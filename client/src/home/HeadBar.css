@@ -1,0 +1,50 @@
+.headbar-wrapper {
+    display: flex;
+    height: 50px;
+    background-color: #085097;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.school_icon {
+    height: 40px;
+    margin-left: 3cqb;
+}
+.mark_icon {
+    height: 60px;
+    margin-top: 5px;
+    margin-left: 0px;
+    border-radius: 8px;
+}
+.scratch_icon {
+    width: 120px;
+    height: 60px;
+    margin-right: 100px;
+    margin-top: 10px;
+}
+
+.headbar-wrapper > p{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+}
+
+.modal-body {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.headbar-wrapper .signup-btn {
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.headbar-wrapper > a {
+    text-decoration: none;
+}
+
