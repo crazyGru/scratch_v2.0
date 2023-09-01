@@ -133,13 +133,21 @@ app.post('/upload', upload.single('file'), async (req, res) => {
             archive.append(spriteData, { name: 'sprite.json' });
             await archive.finalize();
 
-            const currentPath = `uploads/extracted/${target.costumes[0].md5ext}`;
-            const destinationPath = `uploads/images/${spritename}.svg`;
-            if (path.extname(currentPath) === '.svg') {
-                await fs.promises.rename(currentPath, destinationPath);
-            } else {
-                console.log('Current path is not an SVG file. Skipping renaming.');
-            }
+            const costumes = target.costumes;
+
+            costumes.forEach(async (costume) => {
+                const currentPath = `uploads/extracted/${costume.md5ext}`;
+                const destinationPath = `uploads/images/${spritename}.svg`;
+
+                if (path.extname(currentPath) === '.svg') {
+                    await fs.promises.rename(currentPath, destinationPath);
+                    return;
+                } else {
+                    console.log('Current path is not an SVG file. Skipping renaming.');
+                }
+
+            });
+            
             console.log('File moved!');
         }
 
